@@ -1,10 +1,10 @@
 //Imports
 import { useState } from "react"
 import phoneContext from "./contexts/phoneContext"
+import Phone from "./components/Phone"
 import "./App.css"
 
 function App() {
-
   //State
   const [phoneState, setPhoneState] = useState({
     apps: [
@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <phoneContext.Provider value={{ phoneState, setPhoneState }}>
-        <p>Genesis</p>
+        <Phone />
       </phoneContext.Provider>
     </div>
   )
